@@ -1,0 +1,1555 @@
+@import "settings"
+
+@import "sprites"
+
+*
+    box-sizing border-box
+
+reset()
+
+.sr-text
+    position absolute
+    size 1px 1px
+    margin -1px
+    padding 0
+    border 0
+    clip rect(0 0 0 0)
+    overflow hidden
+
+body
+    background-color #fff
+    
+a
+    nodecorate()
+
+hr
+    border 0
+    
+strong
+    fw bold
+    
+.row, .wrapper
+    clearfix()
+    
+                
+.block-title
+    font 600 28px font-Mura
+    text-align center
+    letter-spacing -1px
+    
+    +below(grid-mobile-xs)
+        fs 23px
+
+    &--subscription
+        letter-spacing -.1px
+
+.main-header
+    &_top-row
+        position relative
+        height header-height
+        border-bottom 5px solid #01b4d5
+        
+        +below(grid-mobile)
+            height 100px
+            
+        &_wrapper
+            position relative
+            
+    &_bottom-row
+        position relative
+        height 107px
+        border-bottom 2px solid #fcf2b7
+        
+        +below(grid-desktop-df)
+            height auto
+            padding-bottom 20px
+        &:after
+            content " "
+            block()
+            position absolute
+            bottom -5px
+            left 0
+            right 0
+            height 3px
+            background-color #f6d416
+    &_phone
+        &-item
+            display inline-block
+            +below(grid-mobile)
+                block()
+        &-text
+            margin 25px 0 0 48px
+            font 400 16px font-OpenSans
+            color #7c7c7c
+            letter-spacing .3px
+            
+
+            +below(grid-mobile)
+                margin-top 10px
+            
+            &:after
+                left -36px
+                top 1px
+                sprite($i_phone)
+        &-link
+            margin-left 3px
+            letter-spacing .5px
+            font 800 18px font-OpenSans
+            color #3c3c3c
+            
+            +below(grid-mobile)
+                margin-left 47px
+            
+            &_code
+                color #828282
+            
+    &_lang-list
+        absolute right top
+        height 65px
+        overflow hidden
+        z-index 10
+
+        .main-header_lang-list_item
+            &:first-child
+                .main-header_lang-list_item_link
+                    border-top 0
+            &:last-child
+                .main-header_lang-list_item_link
+                    border-bottom 1px solid #b6b6b6
+            
+        &:hover
+            height auto
+            overflow visible
+            
+            +below(grid-mobile)
+                .main-header_lang-list_item_link
+                    border 1px solid #b6b6b6
+                    border-right 0
+                    border-top 0
+            
+        &_item
+            &_link
+                block()
+                size 92px 65px
+                padding 25px 18px
+                font 800 16px font-OpenSans
+                border-left 1px solid #b6b6b6
+                border-right 1px solid #b6b6b6
+                border-top 1px solid #b6b6b6
+                background-color #fff
+                color #3c3c3c
+                letter-spacing .5px
+                upcase()
+
+                +below(grid-mobile)
+                    border 1px solid transparent
+                    border-right 0
+    &_logo
+        padding-top 17px
+        display inline-block
+        &_img
+            float left
+        &_text
+            margin 24px 0px 0 63px
+            font 600 24px font-Veles
+            color #3a3a3a
+            letter-spacing -.5px
+            
+            +between(grid-desktop-df, grid-desktop-lg)
+                margin-top 14px
+                
+    &_search
+        position relative
+        float right
+        width 91%
+        margin-top 32px
+        border 1px solid #898989
+        border-radius 5px
+        
+        +below(grid-desktop-df)
+            width 100%
+            margin-top 5px
+            
+        &_submit
+            block()
+            position absolute
+            right 9px
+            top 9px
+            background-color #fff
+            sprite($i_search)
+            cursor pointer
+            
+        &_input
+            block()
+            width 91%
+            margin-left 3px
+            padding 9px 25px 9px 12px
+            font 400 16px font-OpenSans
+
+.contact-item
+    display inline-block
+    position relative
+    
+    &:after
+        content " "
+        block()
+        position absolute
+        
+
+.contact-mail
+    display inline-block
+    font 800 16px font-OpenSans
+    color #3c3c3c
+    
+    &--header
+        float right
+        margin 24px 104px 0
+        letter-spacing 1.3px
+        &:after
+            left -38px
+            top 4px
+            sprite($i_mail)
+            
+        +below(grid-mobile)
+            margin 11px 0 0 45px
+            float none
+            
+            &:after
+                left -34px
+                
+    &--footer
+        margin 29px 0 0 79px
+        upcase()
+        &:after
+            left -58px
+            top 0
+            sprite($i_mail_large)
+.nav
+    &_list
+        &--header
+            padding-left 52px
+            +below(grid-desktop-lg)
+                padding-left 0
+        &--footer
+            margin-top 29px
+            +above(grid-desktop-df)
+                margin-left 29px
+            +above(grid-desktop-lg)
+                margin 29px 54px 0 1px 
+        &_item
+            width 25%
+            float left
+            text-align center
+            
+            +below(grid-mobile-xs)
+                width 50%
+            &_link
+                block()
+                font 800 16px font-OpenSans
+                color #3c3c3c
+                upcase()
+                letter-spacing .5px
+                
+                +below(grid-desktop-df)
+                    height auto
+                    margin 10px 0
+                    padding 15px 0
+                
+                &--header
+                    height 107px
+                    padding-top 44px
+                    &:focus, &:hover
+                        background-color #4dcae2
+                        color #fff
+                        
+                    &:hover
+                        .triangle
+                            triangle down 6px #fff
+                    &:focus
+                        .triangle
+                            border-top 0
+                            triangle up 6px #fff
+                        + .dropdown_content
+                            block()
+        
+.triangle
+    display inline-block
+    margin -2px 0 0 3.5px
+    triangle down 6px #01b4d5
+    vertical-align middle
+    
+.dropdown
+    &_right-column            
+        +below(grid-desktop-df)
+            padding-left 0
+    
+    &_item
+        display table
+        margin-top 26px
+        height 46px
+        line-height 46px
+        text-align left
+        
+        &_cell
+            display table-cell
+            vertical-align middle
+            
+        &_link
+            font 800 16px font-OpenSans
+            color #323232
+            padding-left 17px
+            letter-spacing .7px
+            
+        &_icon
+            display inline-block
+            vertical-align middle
+            bg 'sprites.png'
+            
+            &--1
+                spritePosition($i_catalog_1)
+                spriteWidth($i_catalog_1)
+                spriteHeight($i_catalog_1)
+            &--2
+                spritePosition($i_catalog_2)
+                spriteWidth($i_catalog_2)
+                spriteHeight($i_catalog_2)
+            &--3
+                spritePosition($i_catalog_3)
+                spriteWidth($i_catalog_3)
+                spriteHeight($i_catalog_3)
+            &--4
+                spritePosition($i_catalog_4)
+                spriteWidth($i_catalog_4)
+                spriteHeight($i_catalog_4)
+            &--5
+                spritePosition($i_catalog_5)
+                spriteWidth($i_catalog_5)
+                spriteHeight($i_catalog_5)
+            &--6
+                spritePosition($i_catalog_6)
+                spriteWidth($i_catalog_6)
+                spriteHeight($i_catalog_6)
+            &--7
+                spritePosition($i_catalog_7)
+                spriteWidth($i_catalog_7)
+                spriteHeight($i_catalog_7)
+            &--8
+                spritePosition($i_catalog_8)
+                spriteWidth($i_catalog_8)
+                spriteHeight($i_catalog_8)
+            &--9
+                spritePosition($i_catalog_9)
+                spriteWidth($i_catalog_9)
+                spriteHeight($i_catalog_9)
+            &--10
+                spritePosition($i_catalog_10)
+                spriteWidth($i_catalog_10)
+                spriteHeight($i_catalog_10)
+            &--11
+                spritePosition($i_catalog_11)
+                spriteWidth($i_catalog_11)
+                spriteHeight($i_catalog_11)
+            &--12
+                spritePosition($i_catalog_12)
+                spriteWidth($i_catalog_12)
+                spriteHeight($i_catalog_12)
+                
+        &_icon-wrapper
+            display inline-block
+            size 46px 46px
+            border-radius 50%
+            text-align center
+        
+            &--blue
+                background-color #1c9bb2
+            &--sky-blue
+                background-color #01b4d5
+            &--yellow
+                background-color #f6d416
+            &--green
+                background-color #4ca52d
+            &--purple
+                background-color #d4476f
+            &--red
+                background-color #e7302c
+                
+    &_content
+        hide()
+        position absolute
+        left 0
+        right 0
+        top 110px
+        background-color #fff
+        z-index 5
+        
+        +below(grid-desktop-df)
+            top 201px
+                    
+        &_wrapper
+            padding 24px 108px 62px 0
+            
+            +below(grid-desktop-df)
+                padding-right 0
+
+.buy-ukr
+    padding 62px 0 64px 0
+    bg 'block1-bg.png' #01b4d5
+    background-position center center
+    text-align center
+    
+    &_content
+        position relative
+        width 764px
+        margin-left 18.5%
+        padding-bottom 69px
+        background-color rgb(155, 216, 227)
+        background-color rgba(155, 216, 227, .66)
+        border-radius 5px
+        
+        +below(grid-desktop-lg)
+            margin auto
+        +below(grid-desktop-df)
+            width auto
+
+        &_title
+            fw 600
+            fs 49px
+            color #404040
+            padding 56px 0 11px
+        
+            &-descr
+                fs 18px
+                fw 400
+                font-style italic
+                color #3d4d50
+    
+    &_line
+        block()
+        size 120px 5px
+        margin 32px auto 31px auto
+        background-color #e7302c
+        color #e7302c
+        
+    &_text-item
+        font 400 18px font-PTSans
+        color #181818
+        padding 0 70px
+        line-height 1.2
+        
+        +below(grid-tablet)
+            padding 0 30px
+        +below(grid-mobile)
+            padding 0 15px
+        
+.square
+    display inline-block
+    position relative
+    background-color #f6d416
+    transform rotate(45deg)
+    
+    &--big
+        size 55px 55px
+        
+    &--small
+        size 35px 35px
+        
+    &--xs
+        size 30px 30px
+    
+    &:after
+        content " "
+        block()
+        position relative
+        top 50%
+        size 50% 50%
+        margin auto
+        background-color #e7302c
+        transform translateY(-50%)
+    
+    &--block-white
+        margin 0 36px
+        vertical-align middle
+        
+        +below(grid-mobile-xs)
+            margin 0 10px
+            size 20px 20px
+    
+    &--buy-ukr
+        position absolute
+        +below(grid-desktop-lg)
+            hide()
+    &--buy-ukr-1
+        top 127px
+        left -140px
+    &--buy-ukr-2
+        top 117px
+        right -113px
+    &--buy-ukr-3
+        top 138px
+        left -203px
+    &--buy-ukr-4
+        top 126px
+        right -172px
+
+.content
+    background-color #fff
+    
+    [class*=col-]
+        +above(grid-mobile)
+            padding 0 20px
+        
+    &_wrapper
+        +above(1240px)
+            margin 0 -20px
+    
+    &_item
+        block()
+        position relative
+        height 421px
+        margin 37px auto 7px auto
+        text-align center
+        color #181818
+            
+        +below(grid-desktop-lg)
+            max-width 351px
+            margin 7px auto 7px auto
+            
+        +below(grid-mobile-xs)
+            max-width 301px
+            margin 20px auto 7px auto
+
+        &--block-text
+            &_img
+                margin 75px 0 61px 0
+                
+                +below(grid-mobile-xs)
+                    margin-top 10px
+                &--s1
+                    margin-bottom 30px
+                    
+            &_title
+                padding 0 25px
+                font 600 30.33px font-OpenSans
+                upcase()
+            &_descr
+                font 400 18px font-OpenSans
+                padding 0 40px
+                line-height 1.25
+        
+        &_text-white
+            width 90%
+            position absolute
+            top 70%
+            left 9%
+            z-index 2
+            text-align left
+            font italic 600 21px font-OpenSans
+            
+            +below(grid-mobile-xs)
+                width 100%
+                left 0
+                right 0
+                top 60%
+                text-align center
+
+            &--s1
+                top 77%
+                
+                +below(grid-mobile-xs)
+                    top 57%
+            
+            &_line
+                display inline-block
+                padding 2px 19px 2px 2px
+                background-color #fff
+                letter-spacing 0.1px
+                
+                +below(grid-mobile-xs)
+                    block()
+                    margin-top -5px
+                    padding 2px
+            &_brand
+                fw 800 
+                fs 21px
+                color #e7302c
+                upcase()
+                letter-spacing 1px
+                
+            &_img
+                max-width 100%
+                height auto
+        
+        &_line
+            size 52px 5px
+            margin 10px auto 21px
+            background-color #e7302c
+            color #e7302c
+            
+            &--link-white
+                margin-bottom 4px
+            
+            &--block-text--s1
+                margin-bottom 10px
+
+            &--blue
+                background-color #01b4d5
+                color #01b4d5
+                
+            &--yellow
+                background-color #f6d416
+                color #f6d416
+                
+        &--link-white
+            box-shadow 0 0 0 1px #dbdbdb, 0 0 0 1px #bcbcbc
+            border-radius 5px
+            &_img
+                margin-top 36px
+                
+                &--s1
+                    margin-top 15px
+            &_title
+                margin-top 18px
+                font 600 21px font-OpenSans
+                upcase()
+            &_descr
+                font italic 600 21px font-OpenSans
+                padding 0 40px
+                line-height 1.5
+                
+        &_bg-img
+            width 100%
+            height auto
+            max-width 100%
+            max-height 100%
+            absolute top left
+            z-index 1
+
+.news
+    padding 79px 0 87px
+    
+    +below(grid-mobile-xs)
+        padding-top 0
+        
+    &_wrapper
+        margin 0 -7px
+
+        +below(1230px)
+            margin 0
+            
+    &_right-cell        
+        +above(1230px)
+            padding-left 10px
+            margin-right -24px
+
+    &_item
+        margin-top 58px
+        padding 0 7px
+        
+        &_title
+            font 800 18px font-OpenSans
+            upcase()
+            line-height 1.4
+        &_descr
+            margin-top 21px
+            font 400 16px font-PTSans
+            line-height 1.2
+            letter-spacing -.3px
+            
+.subscription
+    padding 24px 0 37px 0
+    bg 'block2-bg.png' #01b4d5
+    background-position center center
+    color #fff
+    text-align center
+    
+    &_line
+        size 56px 4px
+        margin 10px auto
+        background-color #f6d416
+        color #f6d416
+        
+    &_title-descr
+        font 400 18px font-OpenSans
+        padding 0 34%
+        line-height 1.25
+        
+        +below(grid-tablet)
+            padding 0 5%
+        
+    &_form
+        margin-top 33px
+        text-align left
+        &_item
+            float left
+            height 55px
+            width 36.3%
+            margin-right 3.8%
+            
+            &:last-child
+                margin-right 0
+            
+            +below(grid-tablet)
+                width 100%
+                margin 15px auto
+                block()
+                
+            &--submit
+                width 19.4%
+                
+                +below(grid-tablet)
+                    width 100%
+                
+        &_control
+            block()
+            size 100% 100%
+            border-radius 5px
+            font-family font-OpenSans
+        &_input
+            padding 14px 17px
+            background-color transparent
+            border 1px solid #fff
+            border-radius 5px
+            color #fff
+            fw 400
+            fs 18px
+            
+            &::-webkit-input-placeholder
+                font 400 18px font-OpenSans
+                color #fff
+
+            &:-moz-placeholder
+                font 400 18px font-OpenSans
+                color #fff
+
+            &::-moz-placeholder
+                font 400 18px font-OpenSans
+                color #fff
+               
+            &:-ms-input-placeholder
+                font 400 18px font-OpenSans
+                color #fff
+               
+        &_submit
+            fw 600
+            fs 20px
+            background-color #ffffff
+            color #686767
+            cursor pointer
+            
+            &:hover
+                color #282525
+            
+            +below(grid-tablet)
+                width 50%
+                margin auto
+
+.social
+    padding 47px 0 66px 0
+    font-family font-OpenSans
+    
+    +below(grid-desktop-df)
+        text-align center
+        
+    +below(grid-mobile-xs)
+        text-align left
+
+    &_title
+        +below(grid-mobile)
+            margin-bottom 20px
+    
+    &_item
+        display inline-block
+        margin-top 74px
+        text-align left
+        
+        &--product
+            margin 0
+
+        +below(grid-mobile)
+            margin-top 35px
+        &--tw
+            +above(grid-desktop-lg)
+                margin-left 11px
+        &--insta
+            +above(grid-desktop-lg)
+                margin-left 23px
+        
+        &_cell
+            position relative
+            float left
+        &_text-descr
+            margin-top 6px
+            fs 16px
+            fw 400
+            color #454545
+            letter-spacing -.1px
+        &_name
+            padding 8px 6px 0 0
+            fs 17px
+            fw 400
+            color #757575
+            
+            &--vk
+                margin-left 6px
+            &--tw
+               margin-left 5px 
+            &--insta
+                padding-left 10px
+
+.breadcrumbs
+    margin-top 39px
+    &_item
+        float left
+        margin-right 4px
+
+        &:after
+            content "/"
+            font 700 18px font-OpenSans
+            color #919191
+            padding-left 8px
+        
+        &_link
+            font 700 18px font-OpenSans
+            color #919191
+            
+.breadcrumbs
+    .breadcrumbs_item
+        &:last-child
+            &:after
+                content ""
+
+.product
+    padding-top 55px
+    font-family font-OpenSans
+    
+    &_share
+        display inline-block
+        margin 40px -8px -24px 33px
+
+    &_descr
+        margin-top 48px
+        font-family font-OpenSans
+        
+        &_title
+            fs 22px
+            fw 800
+            upcase()
+        &_subtitle
+            margin 10px 0 -16px 0
+            fs 18px
+            fw 800
+            letter-spacing -1.2px
+            upcase()
+        &_text-item
+            margin 18px -33px 0 0
+            fs 16px
+            fw 400
+            line-height 1.4
+            
+            +below(grid-desktop-lg)
+                margin-right 0
+        &_link
+            display inline-block
+            margin 19px 0 113px
+            color #0e8ba2
+            font 600 18px font-OpenSans
+            border-bottom 1px dashed #0e8ba2
+            letter-spacing -.8px
+            
+            +below(grid-desktop-lg)
+                margin-bottom 30px
+
+    &_info
+        margin -5px -45px 0 29px
+        padding-bottom 35px
+        border-bottom 1px solid #616161
+        +below(grid-mobile)
+            margin-left 0
+        +below(grid-desktop-lg)
+            margin -5px 0 0 29px
+        +below(grid-mobile)
+            margin 15px 15px 0 15px
+        &_color-title
+            margin 21px 0 13px 0
+            fs 18px
+            fw 700
+        &_color
+            size 26px 26px
+            display inline-block
+            margin-right 20px
+            border-radius 50%
+            vertical-align middle
+            
+            &--purple
+                background-color #8141b8
+            &--blue
+                background-color #5476c2
+            &--yellow
+                background-color #e9d41f
+            &--red
+                background-color #e7302c
+
+            &--active
+                size 32px 32px
+                margin-right 12px
+                border 2px solid #3f3f3f
+        &_price
+            margin-top 33px
+            font 800 30px font-Muller
+            color #e7302c
+        &_name
+            margin-bottom 31px
+            fw 800 
+            fs 22px
+            upcase()
+        &_charact
+            fs 16px
+            
+            &_item
+                float left
+                fw 700
+                margin-right 5px
+
+    &_img
+        position relative
+        size 92% 337px
+        border 1px solid #e0e0e0
+        border-radius 5px
+        line-height 337px
+        
+        +below(grid-mobile)
+            margin auto
+
+        &_item
+            position absolute
+            top 0
+            bottom 0
+            left 0
+            right 0
+            margin auto
+    
+    &_slider
+        width 92%
+        height 100px
+        margin-top 50px
+        position relative
+        
+        +below(grid-mobile)
+            margin 25px auto
+            
+        &_viewport
+            position relative
+            width 100%
+            height 100px
+        
+        &_item
+            size 33.333% 100px
+            line-height 100px
+            text-align center
+            float left
+            
+            &_img
+                vertical-align middle
+
+            &--active
+                border 1px solid #2095ab
+                border-radius 5px
+        &_arrow
+            spriteWidth($i_arrow_right)
+            spriteHeight($i_arrow_right)
+            position absolute
+            top 50%
+            transform translateY(-50%)
+            spriteImage($i_arrow_left)
+            cursor pointer
+            
+            &--right
+                right -29px
+                spritePosition($i_arrow_right)
+                
+                +below(grid-mobile)
+                    right -15px
+            &--left
+                left -29px
+                spritePosition($i_arrow_left)
+                +below(grid-mobile)
+                    left -15px
+
+    &_producer
+        font-family font-OpenSans
+        fw 600
+        color #0e8ba2
+        
+        +above(grid-desktop-lg)
+            margin-left 82px
+        
+        &_contact-item
+            margin-left 43px
+            &:after
+                spriteImage($i_planet)
+
+        &_info
+            margin-left 42px
+        &_title
+            fw 600
+            fs 20px
+            color #424242
+        &_link
+            margin-top 29px
+            font 600 18px font-OpenSans
+            color #0e8ba2
+            underline()
+            letter-spacing -.5px
+            &:after
+                top 0
+                left -40px
+                sprite($i_planet)
+            
+        &_address
+            margin 24px 75px 0 42px
+            letter-spacing 1.05px
+            
+            +below(grid-desktop-lg)
+                margin-right 10px
+            &:after
+                top 2px
+                left -33px
+                spritePosition($i_map)
+                spriteWidth($i_map)
+                spriteHeight($i_map)
+        &_logo
+            margin-top 13px
+        &_phones
+            margin-top 25px
+            letter-spacing 1px
+            &_link
+                color #0e8ba2
+            &:after
+                top 4px
+                left -32px
+                spritePosition($i_phone)
+                spriteWidth($i_phone)
+                spriteHeight($i_phone)
+                
+        &_map
+            margin-top 45px
+            
+            +below(grid-desktop-lg)
+                margin-bottom 80px
+                
+    &_share
+        position relative
+            
+.product_slider_overview
+    .product_slider_item
+        &:last-child
+            margin-right 0
+
+.main-footer
+    border-top 4px solid #f6d416
+    padding-top 20px            
+
+    &_bottom-row
+        margin-top 45px
+        padding 18px 0
+        border-top 1px solid #c3c3c3
+        text-align center
+        font 600 14px font-OpenSans
+        color #898989
+        letter-spacing -.3px
+        
+    &_social
+        float right
+        
+        +below(grid-desktop-df)
+            float left
+    &_social_icon
+        float left
+        margin 20px 16px 0 0
+        size 38px 38px
+        line-height 38px
+        text-align center
+        background-color #269cb2
+        border-radius 5px
+        
+        +below(grid-desktop-df)
+            margin-left 10px
+            
+.catalogue
+    margin-top 30px
+    font-family font-OpenSans
+    
+    &_items_load
+        margin 40px 0 
+        fw 700
+        fs 14px
+        color #b8b8b8
+        upcase()
+        text-align center
+    
+    &_icon-load
+        display inline-block
+        margin-bottom 12px
+        background-color #fff
+        sprite($i_load_more)
+        
+
+    &_items
+        +above(1240px)
+            margin 0 -20px
+        +below(1240px)
+            text-align center
+        
+    &_item
+        display inline-block
+        margin-top 33px
+        size 260px 427px
+        
+        +above(1240px)
+            padding 0 20px
+        
+        &_link
+            block()
+            size 258px 295px
+            line-height 295px
+            text-align center
+            box-shadow 0 0 0 1px #dbdbdb, 0 0 0 1px #bcbcbc
+            border-radius 5px
+        &_img
+            vertical-align middle
+        &_name
+            margin 31px 0 0 0
+            fw 700
+            fs 18px
+            color #181818
+            
+            +above(1240px)
+                margin 31px -31px 0 0
+        &_price
+            margin-top 10px
+            font 800 24px font-Muller
+            color #e7302c 
+
+    &_adv
+        font-family font-OpenSans
+        position relative
+        block()
+        size 96% 358px
+        margin 26px auto 0
+        
+        &_row
+            margin 0 -20px
+        &--s1
+            float left
+            bg 'content/adv.jpg'
+            background-size cover
+            background-position center center
+            z-index 2
+            
+            +below(grid-desktop-lg)
+                width 100%
+            
+            &_title
+                padding 22px 144px 0 35px
+                font 800 30px font-OpenSans
+                color #fff
+                upcase()
+                line-height 1.25
+                
+                +below(grid-mobile-xs)
+                    fs 26px
+                    padding-right 20px
+            &_title-descr
+                margin 11px 34px
+                font 400 17px font-OpenSans
+                color #000
+                letter-spacing .5px
+                
+                +below(grid-mobile-xs)
+                    fs 16px
+                    
+            &_btn-order
+                display inline-block
+                margin 88px 0 0 28px
+                padding 7px 21px
+                background-color #e7302c
+                color #fff
+                font 800 26px font-Muller
+                border-radius 22px
+                letter-spacing .5px
+                
+                +below(grid-desktop-lg)
+                    margin-top 148px
+                +below(grid-mobile)
+                    margin-top 70px
+                +below(grid-mobile-xs)
+                    margin-top 130px
+            &_img
+                absolute top 25% right 2%
+                
+                +below(grid-mobile-xs)
+                    top 35%
+                    width 120px
+                    height auto
+                
+        &--s2
+            float right
+            
+            +below(grid-desktop-lg)
+                float none
+                width 358px
+                margin 20px auto
+                
+            +below(grid-mobile)
+                width 100%
+            
+            &_img
+                +below(grid-mobile-xs)
+                    max-width 100%
+
+            &_text
+                width auto
+                color #262626
+                fs 17px
+                top 68%
+                
+                &_brand
+                    font-style normal
+                    fs 17px
+                    fw 800
+                    color #e7302c
+                    upcase()
+    &_aside
+        +above(grid-mobile)
+            padding-right 27px
+    &_count
+        margin-top 4px
+        font 400 18px font-OpenSans
+        color #181818
+    &_title
+        font 800 18px font-Muller
+        upcase()
+        letter-spacing -.8px
+    &_cat-list
+        margin 20px 0 21px
+        &_item_link
+            block()
+            padding 8.5px 17px
+            font 600 16px font-OpenSans
+            color #181818
+            letter-spacing -.2px
+            
+            &--active
+                background-color #f3f3f3
+                border-left 4px solid #01b4d5
+    
+    &_producer-form
+        padding-bottom 20px
+        
+        +below(grid-desktop-df)
+            padding-bottom 40px
+            margin-bottom 40px
+            border-bottom 1px solid #8c8c8c
+        
+        &_checkbox
+            hide()
+            &:checked + .catalogue_producer-form_label
+                &:after
+                    background-color #01b4d5
+                &:before
+                    opacity 1
+        &_label
+            position relative
+            block()
+            margin 27px 70px 0 39px
+            font 600 16px font-OpenSans
+            cursor pointer
+            
+            +below(grid-mobile)
+                margin-right 0
+            
+            &:after
+                content " "
+                block()
+                position absolute
+                top 0
+                left -41px
+                size 23px 23px
+                background-color #c8c8c8
+                
+            &:before
+                content " "
+                opacity 0
+                position absolute
+                top 2px
+                left -39px
+                sprite($i_mark)
+                z-index 5
+                
+            &:after, &:before
+                transition all .125s linear
+        &_reset   
+            margin-bottom 39px         
+            &_icon
+                display inline-block
+                margin-left 7px
+                sprite($i_x)
+                vertical-align middle
+            
+            &_label
+                position relative
+                margin -26px 42px 0 0
+                float right
+                cursor pointer
+                font 400 18px font-OpenSans
+                color #717171
+                
+                +below(grid-mobile)
+                    margin-right 0
+            &_input
+                hide()
+            
+    &_line
+        float left
+        width 82%
+        height 1px
+        margin-bottom 33px
+        background-color #8c8c8c
+        color #8c8c8c
+        
+        +below(grid-desktop-df)
+            width 100%
+        
+    &_sort
+        float right
+        margin-top -10px
+        
+        +below(grid-mobile)
+            margin-top 20px
+            float none
+        
+        &_item
+            font 600 16px font-OpenSans
+            color #181818
+
+        &_select
+            background-color #fff
+            padding 10px 13px
+            width 232px
+            border 0
+            
+            +below(370px)
+                width 203px
+
+            &:focus
+                outline 0
+                
+        &_wrapper
+            position relative
+            width 212px
+            margin-left 28px
+            display inline-block
+            border 1px solid #898989
+            border-radius 5px
+            overflow hidden
+            vertical-align middle
+            
+            +below(370px)
+                width 185px
+                margin-left 0
+            
+            &:after
+                content " "
+                block()
+                position absolute
+                top 50%
+                right 20px
+                transform translateY(-50%)
+                triangle down 5px #000
+
+.main-footer
+    .main-footer_social_icon
+        &:last-child
+            margin-right 0
+
+.share
+    &-i-fb
+        &--product
+            margin 0 33px 0 12px
+        &--index
+            margin 0 29px 0 15px
+    &-i-vk
+        &--product
+            margin 0 14px 0 12px
+        &--index
+            margin 0 20px 0 14px
+    &-i-tw
+        &--product
+            margin 0 10px 0 5px
+        &--index
+            margin 0 11px
+            
+    &_btn
+        position relative
+        font-family font-OpenSans
+        border-radius 5px
+        color #fff
+        
+        &:after
+            content " "
+            block()
+            position absolute
+            top 4px
+            bottom 4px
+            background-color #fff
+            width 1px
+            
+        &--index
+            height 40px
+            line-height 40px
+        &--product
+            height 36px
+            line-height 36px
+            
+        &-insta
+            &--index
+                width 45px
+                text-align center
+                
+                &:after
+                    hide()
+                    
+        &-tw
+            &--index
+                width 95px
+
+                &:after
+                    left 41%
+            &--product
+                width 83px
+
+                &:after
+                    left 41%
+
+        &-vk
+            &--product
+                width 74px
+
+                &:after
+                    left 45%
+            &--index
+                width 85px
+                
+                &:after
+                    left 47%
+
+        &-fb
+            &--product
+                width 101px
+                
+                &:after
+                    left 37%
+            &--index
+                width 115px
+                
+                &:after
+                    left 40%
+            
+    &-text-fb
+        &--product
+            fw 700
+            fs 15.17px
+        &--index
+            fw 700
+            fs 17px
+            
+    &-text-tw
+        &--product
+            fw 700
+            fs 11.62px
+        &--index
+            fw 700
+            fs 13px
+
+    &_item
+        float left
+    &_count
+        position relative
+        color #757575
+        fw 600
+        fs 18px
+        border 2px solid #7d7d7d
+        border-radius 5px
+        
+        &--index
+            margin-left 12px
+            padding 6px 11px
+        
+        &--product
+            margin-left 12px
+            padding 4px 8.5px
+        
+        &:after, &:before
+            content " "
+            block()
+            position absolute
+        
+        &:after
+            margin-top -5px
+            left -7px
+            top 50%
+            triangle left 6px #7d7d7d
+            
+        &:before
+            margin-top -5px
+            left -5px
+            top 50%
+            triangle left 6px #fff
+            z-index 10
+    &--fb
+        background-color #3d5a99
+    &--vk
+        background-color #57799d
+    &--tw
+        background-color #2bb1ca
+    &--insta
+        background-color #1a6b8c
+                
+.social-icon
+    display inline-block
+    spriteImage($i_social_sprite)
+    vertical-align middle
+    
+    &--fb
+        spritePosition($i_social_fb)
+        spriteWidth($i_social_fb)
+        spriteHeight($i_social_fb)
+    
+    &--vk
+        spritePosition($i_social_vk)
+        spriteWidth($i_social_vk)
+        spriteHeight($i_social_vk)
+        
+    &--tw
+        spritePosition($i_social_tw)
+        spriteWidth($i_social_tw)
+        spriteHeight($i_social_tw)
+        
+    &--insta
+        spritePosition($i_social_insta)
+        spriteWidth($i_social_insta)
+        spriteHeight($i_social_insta)
+        
+    &--like
+        spritePosition($i_social_like)
+        spriteWidth($i_social_like)
+        spriteHeight($i_social_like)
+        
+@-moz-document url-prefix()
+    .main-header_lang-list_item_link--active
+        padding 25px 17px
+        
+.catalogue_adv--s2_text
+    .content_item_text-white_line
+        +below(grid-mobile-xs)
+            margin-top -25px

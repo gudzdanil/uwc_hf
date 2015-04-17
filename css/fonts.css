@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Veles";
+  src: url("../fonts/veles-bold.eot");
+  src: url("../fonts/veles-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/veles-bold.woff") format("woff"), url("../fonts/veles-bold.ttf") format("truetype"), url("../fonts/veles-bold.svg#Veles") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Myra 4f Caps";
+  src: url("../fonts/myra_4f_caps_bold.eot");
+  src: url("../fonts/myra_4f_caps_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/myra_4f_caps_bold.woff") format("woff"), url("../fonts/myra_4f_caps_bold.ttf") format("truetype"), url("../fonts/myra_4f_caps_bold.svg#Myra 4f Caps") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/muller-extrabold.eot");
+  src: url("../fonts/muller-extrabold.eot?#iefix") format("embedded-opentype"), url("../fonts/muller-extrabold.woff") format("woff"), url("../fonts/muller-extrabold.ttf") format("truetype"), url("../fonts/muller-extrabold.svg#Muller") format("svg");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Myra 4f Caps";
+  src: url("../fonts/myra-4f-caps-bold.eot");
+  src: url("../fonts/myra-4f-caps-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/myra-4f-caps-bold.woff") format("woff"), url("../fonts/myra-4f-caps-bold.ttf") format("truetype"), url("../fonts/myra-4f-caps-bold.svg#Myra 4f Caps") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans-regular.eot");
+  src: url("../fonts/opensans-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-regular.woff") format("woff"), url("../fonts/opensans-regular.ttf") format("truetype"), url("../fonts/opensans-regular.svg#Open Sans") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans-semibold.eot");
+  src: url("../fonts/opensans-semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-semibold.woff") format("woff"), url("../fonts/opensans-semibold.ttf") format("truetype"), url("../fonts/opensans-semibold.svg#Open Sans") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans-semibolditalic.eot");
+  src: url("../fonts/opensans-semibolditalic.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-semibolditalic.woff") format("woff"), url("../fonts/opensans-semibolditalic.ttf") format("truetype"), url("../fonts/opensans-semibolditalic.svg#Open Sans") format("svg");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans-bold.eot");
+  src: url("../fonts/opensans-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-bold.woff") format("woff"), url("../fonts/opensans-bold.ttf") format("truetype"), url("../fonts/opensans-bold.svg#Open Sans") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans-extrabold.eot");
+  src: url("../fonts/opensans-extrabold.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-extrabold.woff") format("woff"), url("../fonts/opensans-extrabold.ttf") format("truetype"), url("../fonts/opensans-extrabold.svg#Open Sans") format("svg");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/pt_sans_regular.eot");
+  src: url("../fonts/pt_sans_regular.eot?#iefix") format("embedded-opentype"), url("../fonts/pt_sans_regular.woff") format("woff"), url("../fonts/pt_sans_regular.ttf") format("truetype"), url("../fonts/pt_sans_regular.svg#PT Sans") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}

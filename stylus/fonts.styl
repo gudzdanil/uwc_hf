@@ -1,0 +1,28 @@
+@import "settings"
+
+font-face(family, fontname, weight = normal, style = normal)
+    @font-face
+        font-family family
+        src url(font-path + fontname + '.eot')
+        src url(font-path + fontname + '.eot?#iefix') format("embedded-opentype"),
+              url(font-path + fontname + '.woff') format("woff"),
+              url(font-path + fontname + '.ttf') format("truetype"),
+              url(font-path + fontname + '.svg#' + family) format("svg")
+        font-weight weight
+        font-style style
+        
+font-face("Veles", "veles-bold", 600)
+
+font-face("Myra 4f Caps", "myra_4f_caps_bold", 600)
+
+font-face("Muller", "muller-extrabold", 800)
+
+font-face("Myra 4f Caps", "myra-4f-caps-bold", 600)
+
+font-face("Open Sans", "opensans-regular", 400)
+font-face("Open Sans", "opensans-semibold", 600)
+font-face("Open Sans", "opensans-semibolditalic", 600, italic)
+font-face("Open Sans", "opensans-bold", 700)
+font-face("Open Sans", "opensans-extrabold", 800)
+
+font-face("PT Sans", "pt_sans_regular", 400)

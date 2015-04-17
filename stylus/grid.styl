@@ -1,0 +1,55 @@
+@import "settings"
+
+[class*="col-"]
+    width 100%
+    float left
+    min-height 1px
+    
+[class*="push-"], [class*="pull-"]
+    position relative
+    
+.wrapper
+    margin auto
+    
+    +below(grid-mobile)
+        padding 0 5px
+    
+//Genereting the grid
++above(1px)
+    for i in (1..grid-columns-count)
+        .col-xs-{i}
+            width ((i/12)*100)%
+        .col-xs-push-{i}
+            left ((i/12)*100)%
+        .col-xs-pull-{i}
+            right ((i/12)*100)%
++above(grid-tablet)
+    for i in (1..grid-columns-count)
+        .col-sm-{i}
+            width ((i/12)*100)%
+        .col-sm-push-{i}
+            left ((i/12)*100)%
+        .col-sm-pull-{i}
+            right ((i/12)*100)%
+    .wrapper
+        width 750px   
++above(grid-desktop-df)
+    for i in (1..grid-columns-count)
+        .col-md-{i}
+            width ((i/12)*100)%
+        .col-md-push-{i}
+            left ((i/12)*100)%
+        .col-md-pull-{i}
+            right ((i/12)*100)%
+    .wrapper
+        width 970px
++above(grid-desktop-lg)
+    for i in (1..grid-columns-count)
+        .col-lg-{i}
+            width ((i/12)*100)%
+        .col-lg-push-{i}
+            left ((i/12)*100)%
+        .col-lg-pull-{i}
+            right ((i/12)*100)%
+    .wrapper
+        width 1150px
